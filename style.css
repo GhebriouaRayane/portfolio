@@ -822,3 +822,32 @@ body.dark-theme footer {
         font-size: 0.9rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* Responsive pour téléphone */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header, section, footer {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
