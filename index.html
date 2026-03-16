@@ -1,236 +1,535 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Expert en Télécommunications & Réseaux</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>GHEBRIOUA Rayane — Réseaux & Sécurité</title>
+    <meta name="description" content="Portfolio de GHEBRIOUA Rayane — Administrateur Réseaux, Télécommunications & Sécurité">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Progress bar -->
+
+    <!-- Scroll progress -->
     <div class="progress-container">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <header>
+    <!-- HEADER -->
+    <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">GHEBRIOUA Rayane</a>
+            <a href="#accueil" class="logo">
+                <span class="logo-bracket">&lt;</span>GR<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="desktop-nav" aria-label="Navigation principale">
+                <a href="#apropos">À Propos</a>
+                <a href="#competences">Compétences</a>
+                <a href="#formation">Formation</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </nav>
+
             <div class="nav-controls">
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon" id="theme-icon"></i>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">
+                    <i class="fas fa-sun" id="theme-icon"></i>
                 </button>
-                <div class="hamburger" id="hamburger">
+                <button class="hamburger" id="hamburger" aria-label="Menu mobile" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </header>
 
+    <!-- Mobile nav overlay -->
     <div class="nav-overlay" id="nav-overlay"></div>
-    <div class="nav-menu" id="nav-menu">
-        <a href="#accueil"><i class="fas fa-home"></i> Accueil</a>
-        <a href="#apropos"><i class="fas fa-user"></i> À propos</a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Menu mobile">
+        <a href="#apropos"><i class="fas fa-user"></i> À Propos</a>
         <a href="#competences"><i class="fas fa-code"></i> Compétences</a>
         <a href="#formation"><i class="fas fa-graduation-cap"></i> Formation</a>
         <a href="#experiences"><i class="fas fa-briefcase"></i> Expériences</a>
-        <a href="#projets"><i class="fas fa-project-diagram"></i> Projets</a>
+        <a href="#projets"><i class="fas fa-folder-open"></i> Projets</a>
         <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-    </div>
+    </nav>
 
     <main>
+        <!-- ============================
+             HERO
+        ============================= -->
         <section id="accueil" class="hero">
-            <div class="particles" id="particles"></div>
+            <canvas id="network-canvas"></canvas>
             <div class="container">
                 <div class="hero-content">
-                    <h1>Administrateur Réseaux Télécommunications et Sécurité</h1>
-                    <p>Étudiant passionné spécialisé en réseaux, virtualisation et développement web avec une approche innovante des technologies modernes</p>
-                    <a href="#contact" class="cta-button">Contactez-moi</a>
+                    <div class="hero-tag">
+                        <span class="tag-dot"></span>
+                        Ouvert aux opportunités
+                    </div>
+
+                    <h1 class="hero-name">
+                        <span class="name-first">GHEBRIOUA</span>
+                        <span class="name-last">RAYANE</span>
+                    </h1>
+
+                    <div class="hero-subtitle">
+                        <span class="subtitle-prompt">$ </span>
+                        <span id="typed-text"></span>
+                        <span class="cursor">█</span>
+                    </div>
+
+                    <p class="hero-desc">
+                        Étudiant en Master Réseaux & Télécommunications, passionné par
+                        la sécurité des infrastructures, la virtualisation et les systèmes
+                        modernes. Membre actif du club scientifique SCENA.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Contactez-moi
+                        </a>
+                        <a href="#projets" class="btn-secondary">
+                            <i class="fas fa-terminal"></i>
+                            Voir les projets
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-num">M2</span>
+                            <span class="stat-label">Réseaux & Télécom</span>
+                        </div>
+                        <div class="stat-sep"></div>
+                        <div class="stat">
+                            <span class="stat-num">2+</span>
+                            <span class="stat-label">Ans d'expérience</span>
+                        </div>
+                        <div class="stat-sep"></div>
+                        <div class="stat">
+                            <span class="stat-num">6+</span>
+                            <span class="stat-label">Compétences clés</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="scroll-hint">
+                <div class="scroll-line"></div>
+                <span>scroll</span>
             </div>
         </section>
 
+        <!-- ============================
+             À PROPOS
+        ============================= -->
         <section id="apropos" class="section">
             <div class="container">
-                <h2>À Propos</h2>
-                <div class="about-content">
-                    <div class="profile-image float">
-                        <img src="images/rayane.jpg" alt="Photo de profil">
+                <div class="section-header">
+                    <span class="section-label">01 / about</span>
+                    <h2 class="section-title">À Propos</h2>
+                    <p class="section-sub">Qui suis-je ?</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-image-col">
+                        <div class="about-image-frame">
+                            <img src="images/rayane.jpg" alt="GHEBRIOUA Rayane">
+                            <div class="image-overlay"></div>
+                            <div class="image-badge">
+                                <span class="badge-pulse"></span>
+                                Étudiant · Ingénieur Réseaux
+                            </div>
+                        </div>
+                        <div class="about-socials">
+                            <a href="https://github.com/GhebriouaRayane" target="_blank" rel="noopener" class="social-btn" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rayane-ghebrioua-82070122b/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:rayaneghebrioua10@gmail.com" class="social-btn" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://wa.me/qr/X5EPSTSCKGJQE1" target="_blank" rel="noopener" class="social-btn" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="about-text">
-                        <p>Bienvenue, je suis Rayane, un étudiant en Réseaux et Télécommunications dévoué avec une passion pour la technologie et une approche créative pour résoudre les problèmes. Je crois en l'apprentissage continu et en restant à la pointe du paysage technologique en constante évolution.</p>
-                        
-                        <p>Fort d'une licence en télécommunications, j'ai conçu et déployé un environnement réseau virtuel reliant deux sites distincts grâce à VMware et GNS3, en y intégrant un pare-feu FortiGate pour assurer une protection optimale et une infrastructure performante.</p>
-                        
-                        <p>Mon approche allie expertise réseau et sens de l'innovation pour concevoir des infrastructures sécurisées et performantes, adaptées aux besoins spécifiques de chaque projet. Je m'engage à perfectionner en continu mes compétences et à explorer les solutions technologiques de pointe afin de relever les défis d'un environnement numérique en constante évolution.</p>
+
+                    <div class="about-text-col">
+                        <p>
+                            Bienvenue, je suis <strong>Rayane</strong>, un étudiant en Réseaux et Télécommunications
+                            avec une passion profonde pour la technologie et une approche créative de la résolution
+                            de problèmes. Je crois en l'apprentissage continu et à rester à la pointe du paysage
+                            technologique en constante évolution.
+                        </p>
+                        <p>
+                            Fort d'une licence en télécommunications, j'ai conçu et déployé un environnement réseau
+                            virtuel reliant deux sites distincts grâce à <strong>VMware</strong> et <strong>GNS3</strong>,
+                            en y intégrant un pare-feu <strong>FortiGate</strong> pour assurer une protection optimale
+                            et une infrastructure performante.
+                        </p>
+                        <p>
+                            Mon approche allie expertise réseau et sens de l'innovation pour concevoir des
+                            infrastructures sécurisées, adaptées aux besoins spécifiques de chaque projet.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span class="tech-tag">FortiGate</span>
+                            <span class="tech-tag">GNS3</span>
+                            <span class="tech-tag">VMware ESXi</span>
+                            <span class="tech-tag">Cisco CCNA</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Fibre Optique</span>
+                            <span class="tech-tag">CCTV</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="competences" class="section">
+        <!-- ============================
+             COMPÉTENCES
+        ============================= -->
+        <section id="competences" class="section section-alt">
             <div class="container">
-                <h2>Compétences Techniques</h2>
+                <div class="section-header">
+                    <span class="section-label">02 / skills</span>
+                    <h2 class="section-title">Compétences Techniques</h2>
+                    <p class="section-sub">Mon arsenal technologique</p>
+                </div>
+
                 <div class="skills-grid">
+
                     <div class="skill-card">
-                        <div class="skill-icon">🌐</div>
-                        <h3>Administration Réseaux</h3>
-                        <p>Compétences en configuration et gestion d'équipements réseau, optimisation des performances, sécurisation et surveillance en temps réel, avec maîtrise des outils Packet Tracer et GNS3, connaissances en Cisco CCNA et solides bases en informatique.</p>
+                        <div class="skill-card-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">network_admin.sh</span>
+                        </div>
+                        <div class="skill-card-body">
+                            <span class="skill-icon">🌐</span>
+                            <h3>Administration Réseaux</h3>
+                            <p>Configuration et gestion d'équipements réseau, optimisation des performances, sécurisation et surveillance en temps réel. Maîtrise de Packet Tracer, GNS3 et connaissances Cisco CCNA.</p>
+                        </div>
                     </div>
+
                     <div class="skill-card">
-                        <div class="skill-icon">☁️</div>
-                        <h3>Virtualisation</h3>
-                        <p>Connaissances pratiques en mise en place d'infrastructures virtualisées avec VMware Workstation et VMware ESXi, ainsi qu'en initiation au cloud computing.</p>
+                        <div class="skill-card-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">virtualization.cfg</span>
+                        </div>
+                        <div class="skill-card-body">
+                            <span class="skill-icon">☁️</span>
+                            <h3>Virtualisation</h3>
+                            <p>Mise en place d'infrastructures virtualisées avec VMware Workstation et VMware ESXi. Initiation au cloud computing et aux environnements multi-VMs.</p>
+                        </div>
                     </div>
+
                     <div class="skill-card">
-                        <div class="skill-icon">📹</div>
-                        <h3>Surveillance Vidéo</h3>
-                        <p>Installation et configuration de systèmes de vidéosurveillance CCTV avec possibilité de monitoring à distance.</p>
+                        <div class="skill-card-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">cctv_monitor.py</span>
+                        </div>
+                        <div class="skill-card-body">
+                            <span class="skill-icon">📹</span>
+                            <h3>Surveillance Vidéo</h3>
+                            <p>Installation et configuration de systèmes de vidéosurveillance CCTV avec monitoring à distance. Intégration dans des architectures réseau sécurisées.</p>
+                        </div>
                     </div>
+
                     <div class="skill-card">
-                        <div class="skill-icon">💻</div>
-                        <h3>Développement Web</h3>
-                        <p>Création de sites web modernes et responsive, avec mise en ligne et hébergement pour un accès public, et connaissances de base en Python.</p>
+                        <div class="skill-card-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">webdev.tsx</span>
+                        </div>
+                        <div class="skill-card-body">
+                            <span class="skill-icon">💻</span>
+                            <h3>Développement Web</h3>
+                            <p>Création de sites web modernes et responsive. Mise en ligne et hébergement. Connaissances en HTML/CSS, Python (Flask), et bases de développement frontend.</p>
+                        </div>
                     </div>
+
                     <div class="skill-card">
-                        <div class="skill-icon">📡</div>
-                        <h3>Télécommunications</h3>
-                        <p>Connaissances des protocoles de communication, de la transmission de données et de l'architecture des réseaux télécoms, incluant les canaux de transmission tels que la fibre optique et le réseau téléphonique commuté.</p>
+                        <div class="skill-card-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">telecom_protocols.log</span>
+                        </div>
+                        <div class="skill-card-body">
+                            <span class="skill-icon">📡</span>
+                            <h3>Télécommunications</h3>
+                            <p>Protocoles de communication, transmission de données et architecture télécom. Maîtrise de la fibre optique (FTTH), du réseau commuté et du traitement du signal.</p>
+                        </div>
                     </div>
+
                     <div class="skill-card">
-                        <div class="skill-icon">🔧</div>
-                        <h3>Support Technique</h3>
-                        <p>Diagnostic avancé, résolution proactive des incidents et maintenance préventive des systèmes critiques.</p>
+                        <div class="skill-card-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">support_tech.sh</span>
+                        </div>
+                        <div class="skill-card-body">
+                            <span class="skill-icon">🔧</span>
+                            <h3>Support Technique</h3>
+                            <p>Diagnostic avancé, résolution proactive des incidents et maintenance préventive des systèmes critiques. Approche méthodique et orientée solutions.</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- ============================
+             FORMATION
+        ============================= -->
         <section id="formation" class="section">
             <div class="container">
-                <h2>Formation</h2>
+                <div class="section-header">
+                    <span class="section-label">03 / education</span>
+                    <h2 class="section-title">Formation</h2>
+                    <p class="section-sub">Mon parcours académique</p>
+                </div>
+
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Diplôme obtenu en 2020</span>
+                                <span class="timeline-org"><i class="fas fa-map-marker-alt"></i> Lycée les 7 Martyres, Sidi-Aich, Béjaïa</span>
+                            </div>
                             <h3>Bac en Technique Mathématique</h3>
-                            <span class="date">Diplôme obtenu en 2020</span>
-                            <span class="date">Lycée les septs martyres mahrez Maala, Sidi-aich, wilaya de Bejaia, Algerie</span>
-                            <p>Formation complète couvrant les fondamentaux théoriques Techniques et mathématiques.</p>
+                            <p>Formation couvrant les fondamentaux théoriques en techniques et mathématiques, base solide pour les études d'ingénierie.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Diplôme avec distinction · 2023</span>
+                                <span class="timeline-org"><i class="fas fa-building"></i> Jura School Excellencia</span>
+                            </div>
                             <h3>Formation en Fibre Optique</h3>
-                            <span class="date">Diplôme obtenu avec distinction en 2023</span>
-                            <span class="date">Jura School Excellencia</span>
-                            <p>Formation complète alliant théorie et pratique, abordant les principes de transmission optique, les techniques de raccordement et d'épissurage, ainsi que les procédures de test, de mesure et de maintenance des réseaux en fibre optique.</p>
+                            <p>Théorie et pratique des principes de transmission optique, techniques de raccordement, épissurage, test, mesure et maintenance des réseaux FO.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Formation en Administration et Sécurité des réseaux et Caméra de Surveillance</h3>
-                            <span class="date">Diplôme obtenu avec distinction en 2023</span>
-                            <span class="date">Campus NTS Academy</span>
-                            <p>Formation complète mêlant théorie et pratique, axée sur la configuration, la gestion et la sécurisation des infrastructures réseau, ainsi que sur l'installation, le paramétrage et la maintenance de systèmes de vidéosurveillance CCTV, incluant des solutions de monitoring à la fois local et à distance.</p>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Diplôme avec distinction · 2023</span>
+                                <span class="timeline-org"><i class="fas fa-building"></i> Campus NTS Academy</span>
+                            </div>
+                            <h3>Administration & Sécurité Réseaux + CCTV</h3>
+                            <p>Configuration, gestion et sécurisation des infrastructures réseau. Installation et maintenance de systèmes de vidéosurveillance CCTV avec monitoring local et distant.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Diplôme avec distinction · 2024</span>
+                                <span class="timeline-org"><i class="fas fa-university"></i> Université Abderrahmane-Mira, Béjaïa</span>
+                            </div>
                             <h3>Licence en Télécommunication</h3>
-                            <span class="date">Diplôme obtenu avec distinction en 2024</span>
-                            <span class="date">Université Abderrahmane-mira de Bejaia, Algerie</span>
-                            <p>Formation complète couvrant les fondamentaux théoriques et pratiques des télécommunications, des systèmes de transmission, du traitement du signal et des technologies numériques avancées, avec une mise en pratique de l'architecture réseau à travers des outils comme Packet Tracer et GNS3.</p>
+                            <p>Fondamentaux théoriques et pratiques des télécommunications, systèmes de transmission, traitement du signal et technologies numériques. Pratique avec Packet Tracer et GNS3.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Études en Master 2 Réseaux Télécommunication</h3>
-                            <span class="date">En cours - Formation avancée</span>
-                            <span class="date">Université Abderrahmane-mira de Bejaia, Algerie</span>
+                        <div class="timeline-dot dot-active"></div>
+                        <div class="timeline-card card-active">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="fas fa-spinner fa-spin"></i> En cours · Formation avancée</span>
+                                <span class="timeline-org"><i class="fas fa-university"></i> Université Abderrahmane-Mira, Béjaïa</span>
+                            </div>
+                            <h3>Master 2 — Réseaux & Télécommunications</h3>
                             <p>Spécialisation approfondie en architecture réseau moderne, protocoles de nouvelle génération, sécurité des communications et technologies émergentes en télécommunication.</p>
+                            <span class="badge-current">En cours</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experiences" class="section">
+        <!-- ============================
+             EXPÉRIENCES
+        ============================= -->
+        <section id="experiences" class="section section-alt">
             <div class="container">
-                <h2>Expériences professionnelle</h2>
+                <div class="section-header">
+                    <span class="section-label">04 / experience</span>
+                    <h2 class="section-title">Expériences Professionnelles</h2>
+                    <p class="section-sub">Mon parcours terrain</p>
+                </div>
+
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Stage pratique en étude et Réalisation d'un reseau Fibre Optique</h3>
-                            <span class="date">Décembre 2022 - Janvier 2023</span>
-                            <span class="date">Algérie Télécom</span>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Décembre 2022 — Janvier 2023</span>
+                                <span class="timeline-org"><i class="fas fa-building"></i> Algérie Télécom</span>
+                            </div>
+                            <h3>Stage — Étude et Réalisation d'un Réseau Fibre Optique</h3>
+                            <p>Participation à l'étude technique et à la mise en œuvre d'un réseau en fibre optique au sein du principal opérateur national des télécommunications.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Stage en qualité Technicien cableur raccordeur de réseaux en Fibre Optique FTTH</h3>
-                            <span class="date">Juin 2023 - Décembre 2023</span>
-                            <span class="date">Campus NTS Academy</span>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Juin 2023 — Décembre 2023</span>
+                                <span class="timeline-org"><i class="fas fa-building"></i> Campus NTS Academy</span>
+                            </div>
+                            <h3>Technicien Câbleur — Raccordeur Fibre Optique FTTH</h3>
+                            <p>Déploiement de réseaux FTTH (Fiber to the Home), raccordement, soudure et tests de liaisons fibre optique en environnement réel.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ============================
+             PROJETS
+        ============================= -->
         <section id="projets" class="section">
             <div class="container">
-                <h2>Projets & Réalisations</h2>
+                <div class="section-header">
+                    <span class="section-label">05 / projects</span>
+                    <h2 class="section-title">Projets & Réalisations</h2>
+                    <p class="section-sub">Ce que j'ai conçu et construit</p>
+                </div>
+
                 <div class="projects-grid">
                     <div class="project-card">
-                        <div class="project-image">🌐</div>
-                        <div class="project-content">
+                        <div class="project-top">
+                            <div class="project-grid-bg"></div>
+                            <span class="project-emoji">🌐</span>
+                            <div class="project-accent-bar"></div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">VMware</span>
+                                <span class="project-tag">GNS3</span>
+                                <span class="project-tag">FortiGate</span>
+                                <span class="project-tag">VLAN</span>
+                            </div>
                             <h3>Infrastructure Réseau Haute Performance</h3>
-                            <p>Conception et implémentation d'une infrastructure réseau d'entreprise avec segmentation VLAN avancée, redondance automatique, intégration d'un pare-feu FortiGate et mise en place de politiques de sécurité renforcées.</p>
+                            <p>Conception et implémentation d'une infrastructure réseau d'entreprise avec segmentation VLAN avancée, redondance automatique, et intégration d'un pare-feu FortiGate avec politiques de sécurité renforcées.</p>
                         </div>
                     </div>
+
                     <div class="project-card">
-                        <div class="project-image">🖥️</div>
-                        <div class="project-content">
+                        <div class="project-top">
+                            <div class="project-grid-bg"></div>
+                            <span class="project-emoji">🖥️</span>
+                            <div class="project-accent-bar" style="background: linear-gradient(90deg, var(--orange), var(--violet));"></div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML/CSS</span>
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">Render</span>
+                            </div>
                             <h3>Site Web Dynamique</h3>
-                            <p>Création d'un site web moderne et responsive avec HTML, CSS et Python (Flask), intégrant une interface utilisateur soignée et hébergé sur Render pour un accès en ligne fiable et performant.</p>
+                            <p>Création d'un site web moderne et responsive avec HTML, CSS et Python Flask. Interface utilisateur soignée, hébergé sur Render pour un accès fiable en ligne.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
+        <!-- ============================
+             CONTACT
+        ============================= -->
+        <section id="contact" class="section section-alt">
             <div class="container">
-                <h2>Contactez-moi</h2>
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Mes Coordonnées</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:rayaneghebrioua10@gmail.com">rayaneghebrioua10@gmail.com</a>
+                <div class="section-header">
+                    <span class="section-label">06 / contact</span>
+                    <h2 class="section-title">Contactez-moi</h2>
+                    <p class="section-sub">Discutons de votre projet</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-card">
+                        <div class="contact-card-top">
+                            <h3>Restons en contact</h3>
+                            <p>Disponible pour des opportunités, collaborations ou simplement un échange.</p>
                         </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/rayane-ghebrioua-82070122b/" target="_blank">Rayane Ghebrioua</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+213790940731">+213 790 940 731</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/qr/X5EPSTSCKGJQE1" target="_blank">+213 790 940 731</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/GhebriouaRayane" target="_blank">GhebriouaRayane</a>
+                        <div class="contact-list">
+                            <a href="mailto:rayaneghebrioua10@gmail.com" class="contact-row">
+                                <div class="contact-icon-wrap"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-val">rayaneghebrioua10@gmail.com</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rayane-ghebrioua-82070122b/" target="_blank" rel="noopener" class="contact-row">
+                                <div class="contact-icon-wrap"><i class="fab fa-linkedin-in"></i></div>
+                                <div class="contact-text">
+                                    <span class="contact-label">LinkedIn</span>
+                                    <span class="contact-val">Rayane Ghebrioua</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+                            <a href="tel:+213790940731" class="contact-row">
+                                <div class="contact-icon-wrap"><i class="fas fa-phone"></i></div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Téléphone</span>
+                                    <span class="contact-val">+213 790 940 731</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+                            <a href="https://wa.me/qr/X5EPSTSCKGJQE1" target="_blank" rel="noopener" class="contact-row">
+                                <div class="contact-icon-wrap"><i class="fab fa-whatsapp"></i></div>
+                                <div class="contact-text">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <span class="contact-val">+213 790 940 731</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+                            <a href="https://github.com/GhebriouaRayane" target="_blank" rel="noopener" class="contact-row">
+                                <div class="contact-icon-wrap"><i class="fab fa-github"></i></div>
+                                <div class="contact-text">
+                                    <span class="contact-label">GitHub</span>
+                                    <span class="contact-val">GhebriouaRayane</span>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -238,9 +537,16 @@
         </section>
     </main>
 
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Portfolio - Expert en Télécommunications & Réseaux. Tous droits réservés.</p>
+        <div class="container footer-inner">
+            <span class="footer-logo"><span class="logo-bracket">&lt;</span>GR<span class="logo-bracket">/&gt;</span></span>
+            <p>&copy; 2025 GHEBRIOUA Rayane — Réseaux & Télécommunications</p>
+            <span class="footer-tag">Algérie 🇩🇿</span>
         </div>
     </footer>
 
