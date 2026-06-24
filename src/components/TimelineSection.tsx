@@ -34,7 +34,7 @@ export const TimelineSection: React.FC = () => {
       id: 2,
       type: 'education',
       title: "Formation Networc security (NetSec)",
-      institution: "Université Abderrahmane-mira de Bejaia, Algérie",
+      institution: "Centre de recherche CRTAA et cisco Bejaia, Algérie",
       date: "En cours (mars 2026 - aout 2026)",
       location: "Béjaïa, Algérie",
       description: "Formation certifiante Cisco alliant théorie et pratique. Axée sur la sécurisation des infrastructures réseau, la gestion des accès, la protection contre les cybermenaces et la mise en œuvre de solutions de cybersécurité pour les environnements professionnels..",
