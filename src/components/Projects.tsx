@@ -32,18 +32,20 @@ export const Projects: React.FC = () => {
     },
     {
       id: 2,
-      title: "Plateforme Web Dynamique Responsive",
+      title: "Projet Startup Tourigo – Plateforme de réservation touristique intelligente",
       category: "Développement Web & Automatisation",
-      description: "Création et mise en ligne d'une application web complète, moderne et adaptative (Mobile, Tablette, PC). Développée en combinant la flexibilité du HTML/CSS pour le frontend et la puissance de Python pour le backend, l'application propose une interface utilisateur soignée, une navigation fluide et des performances optimisées.",
+      description: "Projet de développement d'une plateforme numérique de réservation touristique disponible sur le Web et Android (APK), centralisant l'hébergement, la location de véhicules et les activités touristiques. Conception d'une architecture moderne, sécurisée et évolutive, offrant une expérience utilisateur fluide grâce à une interface responsive et des services backend performants.",
       features: [
-        "Interface utilisateur adaptative et moderne utilisant des grilles flexibles et du CSS avancé.",
-        "Backend dynamique propulsé par Python et le micro-framework Flask.",
-        "Gestion des requêtes clients, traitement de formulaires et routing dynamique côté serveur.",
-        "Optimisation du SEO et de la vitesse de chargement des ressources statiques.",
-        "Déploiement continu et hébergement public automatisé sur la plateforme Cloud Render.",
-        "Automatisation de scripts via Python pour l'intégration de fonctionnalités (ex: envoi de mails, scraping)."
+        "Frontend : TypeScript, Tailwind CSS, Vite",
+        "Backend : FastAPI, SQLAlchemy, Pydantic",
+        "Base de données : PostgreSQL",
+        "Sécurité : JWT, Bcrypt",
+        "Plateformes : Application Web Responsive, Application Android (APK)",
+        "Architecture : API RESTful, Client-Serveur."
+        "Intégration de l'IA (Chatbot)."
+        "Outils : Git, GitHub"
       ],
-      tags: ["HTML5 / CSS3", "JavaScript", "Python", "Flask", "Render Cloud", "Responsive Design"],
+      tags: ["typeScript", "CSS Tailwind", "vite", "Python", "FastAPI", "Render Cloud", "vercel", "brevo", "SupaBase", "Responsive Design"],
       color: "from-purple-600 to-pink-600"
     }
   ];
