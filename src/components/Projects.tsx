@@ -33,7 +33,7 @@ export const Projects: React.FC = () => {
     {
       id: 2,
       title: "Projet Startup Tourigo – Plateforme de réservation touristique intelligente",
-      category: "Développement Web & Automatisation",
+      category: "Développement Web & Automatisation ",
       description: "Projet de développement d'une plateforme numérique de réservation touristique disponible sur le Web et Android (APK), centralisant l'hébergement, la location de véhicules et les activités touristiques. Conception d'une architecture moderne, sécurisée et évolutive, offrant une expérience utilisateur fluide grâce à une interface responsive et des services backend performants.",
       features: [
         "Frontend : TypeScript, Tailwind CSS, Vite",
