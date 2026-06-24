@@ -40,9 +40,9 @@ export const Projects: React.FC = () => {
         "Backend : FastAPI, SQLAlchemy, Pydantic",
         "Base de données : PostgreSQL",
         "Sécurité : JWT, Bcrypt",
-        "Plateformes : Application Web Responsive, Application Android APK",
-        "Architecture : API RESTful, Client-Serveur."
-        "Intégration de l'IA Chatbot."
+        "Plateformes : Application Web Responsive, Application Android (APK)",
+        "Architecture : API RESTful, Client-Serveur.",
+        "Intégration de l'IA (Chatbot).",
         "Outils : Git, GitHub."
       ],
       tags: ["typeScript", "CSS Tailwind", "vite", "Python", "FastAPI", "Render Cloud", "vercel", "brevo", "SupaBase", "Responsive Design"],
