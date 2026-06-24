@@ -30,24 +30,15 @@ export const Projects: React.FC = () => {
       tags: ["GNS3", "VMware ESXi", "FortiGate", "Cisco CLI", "VLAN / HSRP", "VPN IPsec"],
       color: "from-blue-600 to-indigo-600"
     },
-    {
-      id: 2,
-      title: "Projet Startup Tourigo – Plateforme de réservation touristique intelligente",
-      category: "Développement Web & Automatisation",
-      description: "Projet de développement d'une plateforme numérique de réservation touristique disponible sur le Web et Android (APK), centralisant l'hébergement, la location de véhicules et les activités touristiques. Conception d'une architecture moderne, sécurisée et évolutive, offrant une expérience utilisateur fluide grâce à une interface responsive et des services backend performants.",
-      features: [
-        "Frontend : TypeScript, Tailwind CSS, Vite",
-        "Backend : FastAPI, SQLAlchemy, Pydantic",
-        "Base de données : PostgreSQL",
-        "Sécurité : JWT, Bcrypt",
-        "Plateformes : Application Web Responsive, Application Android (APK)",
-        "Architecture : API RESTful, Client-Serveur."
-        "Intégration de l'IA (Chatbot)."
-        "Outils : Git, GitHub"
-      ],
-      tags: ["typeScript", "CSS Tailwind", "vite", "Python", "FastAPI", "Render Cloud", "vercel", "brevo", "SupaBase", "Responsive Design"],
-      color: "from-purple-600 to-pink-600"
-    }
+
+
+
+
+
+
+
+
+    
   ];
 
   return (
