@@ -18,15 +18,34 @@ export const TimelineSection: React.FC = () => {
     {
       id: 1,
       type: 'education',
-      title: "Études en Master 2 Réseaux Télécommunication",
+      title: "Ingénieur en Réseaux Télécommunication",
       institution: "Université Abderrahmane-mira de Bejaia, Algérie",
-      date: "En cours (2025 - 2026)",
+      date: "Diplôme obtenu en 2026 (Mention excellente)",
       location: "Béjaïa, Algérie",
       description: "Spécialisation approfondie en architectures réseaux modernes, protocoles de nouvelle génération (IPv6, MPLS), sécurité avancée des communications, routage dynamique complexe, et intégration des technologies émergentes en télécommunication (5G, SDN).",
       skillsAcquired: ["SDN", "Sécurité Réseau", "Protocoles Avancés", "Architecture Cloud"]
     },
-    {
+
+
+
+
+
+     {
       id: 2,
+      type: 'education',
+      title: "Formation Networc security (NetSec)",
+      institution: "Université Abderrahmane-mira de Bejaia, Algérie",
+      date: "En cours (mars 2026 - aout 2026)",
+      location: "Béjaïa, Algérie",
+      description: "Formation certifiante Cisco alliant théorie et pratique. Axée sur la sécurisation des infrastructures réseau, la gestion des accès, la protection contre les cybermenaces et la mise en œuvre de solutions de cybersécurité pour les environnements professionnels..",
+      skillsAcquired: ["Sécurisation réseau", "Contrôle d'accès", "Pare-feu et politiques de sécurité", "Surveillance et analyse des menaces"]
+    },
+
+
+
+    
+    {
+      id: 3,
       type: 'education',
       title: "Licence en Télécommunication",
       institution: "Université Abderrahmane-mira de Bejaia, Algérie",
@@ -36,7 +55,7 @@ export const TimelineSection: React.FC = () => {
       skillsAcquired: ["Transmission", "Traitement du Signal", "Packet Tracer", "Routage statique/dynamique"]
     },
     {
-      id: 3,
+      id: 4,
       type: 'education',
       title: "Formation Administration & Sécurité des réseaux et Caméras CCTV",
       institution: "Campus NTS Academy",
@@ -46,7 +65,7 @@ export const TimelineSection: React.FC = () => {
       skillsAcquired: ["Sécurisation Réseau", "CCTV IP / NVR", "Maintenance préventive", "Accès distant"]
     },
     {
-      id: 4,
+      id: 5,
       type: 'education',
       title: "Formation en Déploiement Fibre Optique FTTH",
       institution: "Jura School Excellencia",
@@ -56,7 +75,7 @@ export const TimelineSection: React.FC = () => {
       skillsAcquired: ["Épissure par fusion", "Réflectométrie OTDR", "FTTH", "Bilan de liaison"]
     },
     {
-      id: 5,
+      id: 6,
       type: 'education',
       title: "Baccalauréat en Technique Mathématique",
       institution: "Lycée les sept martyrs Mahrez Maala",
