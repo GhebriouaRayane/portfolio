@@ -36,11 +36,11 @@ export const Projects: React.FC = () => {
       category: "Développement Web & Automatisation",
       description: "Projet de développement d'une plateforme numérique de réservation touristique disponible sur le Web et Android (APK), centralisant l'hébergement, la location de véhicules et les activités touristiques. Conception d'une architecture moderne, sécurisée et évolutive, offrant une expérience utilisateur fluide grâce à une interface responsive et des services backend performants.",
       features: [
-        "Frontend : TypeScript, Tailwind CSS, Vite",
-        "Backend : FastAPI, SQLAlchemy, Pydantic",
-        "Base de données : PostgreSQL",
-        "Sécurité : JWT, Bcrypt",
-        "Plateformes : Application Web Responsive, Application Android (APK)",
+        "Frontend : TypeScript, Tailwind CSS, Vite.",
+        "Backend : FastAPI, SQLAlchemy, Pydantic.",
+        "Base de données : PostgreSQL.",
+        "Sécurité : JWT, Bcrypt.",
+        "Plateformes : Application Web Responsive, Application Android (APK).",
         "Architecture : API RESTful, Client-Serveur.",
         "Intégration de l'IA (Chatbot).",
         "Outils : Git, GitHub."
