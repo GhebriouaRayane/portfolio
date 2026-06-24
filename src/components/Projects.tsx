@@ -43,7 +43,7 @@ export const Projects: React.FC = () => {
         "Plateformes : Application Web Responsive, Application Android APK",
         "Architecture : API RESTful, Client-Serveur."
         "Intégration de l'IA Chatbot."
-        "Outils : Git, GitHub"
+        "Outils : Git, GitHub."
       ],
       tags: ["typeScript", "CSS Tailwind", "vite", "Python", "FastAPI", "Render Cloud", "vercel", "brevo", "SupaBase", "Responsive Design"],
       color: "from-purple-600 to-pink-600"
